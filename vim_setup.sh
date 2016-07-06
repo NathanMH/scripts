@@ -17,7 +17,8 @@ if [ ! -d ~/.vim/autoloads/ ]; then
     
     # GET ALL THE PLUGINS!
     git clone https://github.com/easymotion/vim-easymotion ~/.vim/bundle/vim-easymotion.vim
-    git clone https://github.com/tpope/vim-surround ~/.vim/bundle/vim-surround.vim
+    git clone git://github.com/tpope/vim-surround ~/.vim/bundle/vim-surround.git
+    git clone git://github.com/tpope/vim-commentary.git ~/.vim/bundle/vim-commentary.git
 fi
 
 cp ~/Documents/dotfiles/vim/.vimrc ~/
