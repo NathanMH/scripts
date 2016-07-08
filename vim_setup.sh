@@ -19,6 +19,7 @@ if [ ! -d ~/.vim/autoloads/ ]; then
     git clone https://github.com/easymotion/vim-easymotion ~/.vim/bundle/vim-easymotion.vim
     git clone git://github.com/tpope/vim-surround ~/.vim/bundle/vim-surround.git
     git clone git://github.com/tpope/vim-commentary.git ~/.vim/bundle/vim-commentary.git
+    git clone https://github.com/itchyny/calendar.vim ~/.vim/bundle/calendar.vim
 fi
 
 cp ~/Documents/dotfiles/vim/.vimrc ~/
