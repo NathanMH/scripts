@@ -33,6 +33,7 @@ if [ ! -d ~/.emacs.d/elpa/ ]; then
     git clone https://github.com/timchaper/evil-surround                ~/.emacs.d/elpa/
     git clone https://github.com/7696122/evil-terminal-cursor-changer   ~/.emacs.d/elpa/
     git clone https://github.com/edwtjo/evil-org-mode                   ~/.emacs.d/elpa/
+    git clone https://github.com/JorisE/evil-mu4e                       ~/.emacs.d/elpa/
     # TODO / To cut
     # git clone https://github.com/djcb/mu
     # git clone https://github.com/
