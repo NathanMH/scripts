@@ -16,10 +16,11 @@ if [ ! -d ~/.vim/autoloads/ ]; then
     curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
     
     # GET ALL THE PLUGINS!
-    git clone https://github.com/easymotion/vim-easymotion ~/.vim/bundle/vim-easymotion.vim
-    git clone git://github.com/tpope/vim-surround ~/.vim/bundle/vim-surround.git
-    git clone git://github.com/tpope/vim-commentary.git ~/.vim/bundle/vim-commentary.git
-    git clone https://github.com/itchyny/calendar.vim ~/.vim/bundle/calendar.vim
+    git clone https://github.com/easymotion/vim-easymotion ~/.vim/bundle/easymotion
+    git clone git://github.com/tpope/vim-surround ~/.vim/bundle/surround
+    git clone git://github.com/tpope/vim-commentary.git ~/.vim/bundle/commentary
+    git clone https://github.com/itchyny/calendar.vim ~/.vim/bundle/calendar
+    git clone https://github.com/kien/rainbow_parenthesis.vim ~/.vim/bundle/rainbow
 fi
 
 cp ~/Documents/dotfiles/vim/.vimrc ~/
