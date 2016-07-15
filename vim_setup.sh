@@ -23,9 +23,9 @@ if [ ! -d ~/.vim/autoloads/ ]; then
     git clone https://github.com/itchyny/calendar.vim ~/.vim/bundle/calendar
     git clone https://github.com/itchyny/lightline.vim ~/.vim/bundle/lightline
 
-    # Get patchet fonts
-    git clone https://github.com/powerline/fonts ~/Documents/fonts
-    bash ~/Documents/fonts/install.sh
+    # Get fonts
+    git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git ~/.fonts/adobe-fonts/source-code-pro
+    fc-cache -f -v ~/.fonts/adobe-fonts/source-code-pro
 fi
 
 cp ~/Documents/dotfiles/vim/.vimrc ~/
