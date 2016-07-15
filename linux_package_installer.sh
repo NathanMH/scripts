@@ -22,7 +22,10 @@ apt-get install usbmount -y # For auto usb mounting
 apt-get install vim-gnome -y # For copy/paste support
 apt-get install xboxdrv -y # Controller support
 
-
+# Languages
+apt-get install lua5.2 -y # Get 5.3 if available
+apt-get install python3.4 -y
+apt-get install ruby2.1 -y # Get 2.3 if available
 
 
 

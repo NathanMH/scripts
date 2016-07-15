@@ -7,7 +7,7 @@ if [ ! -d ~/Documents/dotfiles/ ]; then
     git clone https://github.com/NathanMH/dotfiles ~/Documents/
 fi
 
-if [ ! -d ~/.vim/autoloads/ ]; then
+if [ ! -d ~/.vim/autoloadsss/ ]; then
     # Get Pathogen going
     echo "Vim bundles/autoload don't exist, cloning..."
     mkdir -p ~/.vim/autoload ~/.vim/bundle && \
@@ -22,6 +22,14 @@ if [ ! -d ~/.vim/autoloads/ ]; then
     git clone https://github.com/kien/rainbow_parenthesis.vim ~/.vim/bundle/rainbow
     git clone https://github.com/itchyny/calendar.vim ~/.vim/bundle/calendar
     git clone https://github.com/itchyny/lightline.vim ~/.vim/bundle/lightline
+
+    # Syntax Checking 
+    git clone https://github.com/scrooloose/syntastic.git ~/.vim/bundle/syntastic
+    sudo apt-get install pylint -y # Python
+    sudo apt-get install luarocks -y # Needed for easy installation of LuaCheck
+    luarocks install luacheck
+    gem install ruby-lint
+    pip install vim-vint
 
     # Get fonts
     git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git ~/.fonts/adobe-fonts/source-code-pro
