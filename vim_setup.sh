@@ -27,9 +27,14 @@ if [ ! -d ~/.vim/autoloadsss/ ]; then
     git clone https://github.com/scrooloose/syntastic.git ~/.vim/bundle/syntastic
     sudo apt-get install pylint -y # Python
     sudo apt-get install luarocks -y # Needed for easy installation of LuaCheck
-    luarocks install luacheck
-    gem install ruby-lint
-    pip install vim-vint
+    luarocks install luacheck # Installs Lua syntax checker
+    gem install ruby-lint # Installs Ruby syntax checker
+    pip install vim-vint # Installs VimL syntax checker
+    # TODO 
+    ## C syntax checker
+    ## C++ syntax checker
+    ## Objective-C syntax checker
+    ## Bash(sh) syntax checker (shellcheck)
 
     # Get fonts
     git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git ~/.fonts/adobe-fonts/source-code-pro

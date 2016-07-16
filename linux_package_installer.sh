@@ -5,7 +5,7 @@ apt-get install cmus -y # Music player
 apt-get install emacs -y # Epub reader
 apt-get install fbreader -y
 apt-get install filezilla -y # Alternative?
-apt-get install git -y # Git all the things!
+apt-get install git-all -y # Git all the things!
 apt-get install i3wm -y # Does it come with i3status/lock?
 apt-get install mpv -y # Video player
 
