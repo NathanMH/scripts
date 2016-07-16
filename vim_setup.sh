@@ -35,7 +35,7 @@ if [ ! -d ~/.vim/autoloadsss/ ]; then
     # Autocomplete 
     git clone https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/youcompleteme
     git submodule update --init --recursive
-    ~/.vim/bundle/youcompleteme/.install.sh --clang-completer
+    python3 ~/.vim/bundle/youcompleteme/.install.py --clang-completer
 
     # Get fonts
     git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git ~/.fonts/adobe-fonts/source-code-pro
