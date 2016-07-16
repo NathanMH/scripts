@@ -25,16 +25,17 @@ if [ ! -d ~/.vim/autoloadsss/ ]; then
 
     # Syntax Checking 
     git clone https://github.com/scrooloose/syntastic.git ~/.vim/bundle/syntastic
-    sudo apt-get install pylint -y # Python
+    sudo apt-get install pylint -y # Python syntax checker
     sudo apt-get install luarocks -y # Needed for easy installation of LuaCheck
-    luarocks install luacheck # Installs Lua syntax checker
-    gem install ruby-lint # Installs Ruby syntax checker
-    pip install vim-vint # Installs VimL syntax checker
-    # TODO 
-    ## C syntax checker
-    ## C++ syntax checker
-    ## Objective-C syntax checker
-    ## Bash(sh) syntax checker (shellcheck)
+    luarocks install luacheck # Lua syntax checker
+    gem install ruby-lint # Ruby syntax checker
+    pip install vim-vint # VimL syntax checker
+    apt-get install shellcheck # Bash shell script syntax checker
+
+    # Autocomplete 
+    git clone https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/youcompleteme
+    git submodule update --init --recursive
+    ~/.vim/bundle/youcompleteme/.install.sh --clang-completer
 
     # Get fonts
     git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git ~/.fonts/adobe-fonts/source-code-pro

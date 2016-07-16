@@ -8,6 +8,7 @@ apt-get install filezilla -y # Alternative?
 apt-get install git-all -y # Git all the things!
 apt-get install i3wm -y # Does it come with i3status/lock?
 apt-get install mpv -y # Video player
+apt-get install cmake
 
 
 # Mu4e plus dependencies (including optional pdf and html viewers)
