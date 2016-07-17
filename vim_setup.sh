@@ -22,6 +22,7 @@ if [ ! -d ~/.vim/autoloadsss/ ]; then
     git clone https://github.com/kien/rainbow_parenthesis.vim ~/.vim/bundle/rainbow
     git clone https://github.com/itchyny/calendar.vim ~/.vim/bundle/calendar
     git clone https://github.com/itchyny/lightline.vim ~/.vim/bundle/lightline
+    git clone https://github.com/Yggdroot/indentLine ~/.vim/bundle/indentline
 
     # Syntax Checking 
     git clone https://github.com/scrooloose/syntastic.git ~/.vim/bundle/syntastic
