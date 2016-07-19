@@ -23,6 +23,7 @@ if [ ! -d ~/.vim/autoload/ ]; then
     git clone https://github.com/itchyny/calendar.vim ~/.vim/bundle/calendar
     git clone https://github.com/itchyny/lightline.vim ~/.vim/bundle/lightline
     git clone https://github.com/Yggdroot/indentLine ~/.vim/bundle/indentline
+    git clone https://github.com/Raimondi/delimitMate.git ~/.vim/bundle/delimitmate
 
     # Syntax Checking 
     git clone https://github.com/scrooloose/syntastic.git ~/.vim/bundle/syntastic

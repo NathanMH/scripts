@@ -27,6 +27,8 @@ A simple vim setup. Makes use of Pathogen and GitHub to install plugins.
 
 [ IndentLine ](https://github.com/Yggdroot/indentLine)
 
+[ DelimitMate ](https://github.com/Raimondi/delimitMate)
+
 [ Syntastic ](https://github.com/scrooloose/syntastic)
 
 ### Syntax Checking
