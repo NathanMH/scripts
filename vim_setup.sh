@@ -7,7 +7,7 @@ if [ ! -d ~/Documents/dotfiles/ ]; then
     git clone https://github.com/NathanMH/dotfiles ~/Documents/
 fi
 
-if [ ! -d ~/.vim/autoloadsss/ ]; then
+if [ ! -d ~/.vim/autoload/ ]; then
     # Get Pathogen going
     echo "Vim bundles/autoload don't exist, cloning..."
     mkdir -p ~/.vim/autoload ~/.vim/bundle && \
@@ -19,7 +19,7 @@ if [ ! -d ~/.vim/autoloadsss/ ]; then
     git clone git://github.com/tpope/vim-surround ~/.vim/bundle/surround
     git clone git://github.com/tpope/vim-commentary.git ~/.vim/bundle/commentary
     git clone https://github.com/easymotion/vim-easymotion ~/.vim/bundle/easymotion
-    git clone https://github.com/kien/rainbow_parenthesis.vim ~/.vim/bundle/rainbow
+    git clone https://github.com/kien/rainbow_parentheses.vim ~/.vim/bundle/rainbowparentheses
     git clone https://github.com/itchyny/calendar.vim ~/.vim/bundle/calendar
     git clone https://github.com/itchyny/lightline.vim ~/.vim/bundle/lightline
     git clone https://github.com/Yggdroot/indentLine ~/.vim/bundle/indentline

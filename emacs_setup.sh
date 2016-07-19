@@ -23,7 +23,7 @@ if [ ! -d ~/.emacs.d/elpa/ ]; then
     git clone https://github.com/company-mode/company-mode              ~/.emacs.d/elpa/
     git clone https://github.com/emacsmirror/evil                       ~/.emacs.d/elpa/
     git clone https://github.com/cofi/evil-leader                       ~/.emacs.d/elpa/
-    git clone https://github.com/flycheck/flyckeck                      ~/.emacs.d/elpa/
+    git clone https://github.com/flycheck/flycheck                      ~/.emacs.d/elpa/
     git clone https://github.com/deactivated/hl-tags-mode               ~/.emacs.d/elpa/
     git clone https://github.com/emacsmirror/keychord                   ~/.emacs.d/elpa/
     git clone https://github.com/jsinglet/latex-preview-pane            ~/.emacs.d/elpa/
