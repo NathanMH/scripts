@@ -21,11 +21,25 @@ def make_soup(html):
 
 def check_number_of_bounties(soup, filename):
     with open(filename, 'r') as text_file:
-        bounties = text_file.read()
-        print("Previous Bounties: " + bounties)
+        bounties = text_file.readline()
 
-    active_bounties = len(soup.find_all("svg", class_="octicon octicon-issue-opened open"))
-    print("Current Bounties: " + str(active_bounties))
+    number_active_bounties = len(soup.find_all("svg", class_="octicon octicon-issue-opened open"))
+    print("Previous Bounties: " + bounties.rstrip())
+    print("Current Bounties: " + str(number_active_bounties))
+    print("---------------")
+
+    all_bounties = soup.find_all("p", class_="title")
+    for i in all_bounties:
+        print(i)
+        print()
+
+    # active_bounties = []
+    # for i in range(1, number_active_bounties):
+    #     print(all_bounties[i])
+    #     active_bounties[i] = all_bounties[i]
+    # print(len(active_bounties)ne)
+    # for i in active_bounties:
+    #     print(i)
 
 
 # def __main__(url):
@@ -33,4 +47,3 @@ def check_number_of_bounties(soup, filename):
 html = make_html(url)
 soup = make_soup(html)
 check_number_of_bounties(soup, 'previous_bounties.txt')
-    
