@@ -11,3 +11,4 @@ call git clone https://github.com/kien/rainbow_parentheses.vim "C:\Users\Nathan 
 call git clone git://github.com/tpope/vim-commentary.git "C:\Users\Nathan Mador-House\Documents\gVimPortable\Data\settings\vimfiles\bundle\vim-commentary"
 call git clone https://github.com/easymotion/vim-easymotion "C:\Users\Nathan Mador-House\Documents\gVimPortable\Data\settings\vimfiles\bundle\vim-easymotion"
 call git clone git://github.com/tpope/vim-surround "C:\Users\Nathan Mador-House\Documents\gVimPortable\Data\settings\vimfiles\bundle\vim-surround"
+call git clone https://github.com/SirVer/ultisnips "C:\Users\Nathan Mador-House\Documents\gVimPortable\Data\settings\vimfiles\bundle\ultisnips"
