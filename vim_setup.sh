@@ -25,6 +25,7 @@ if [ ! -d ~/.vim/autoload/ ]; then
     git clone git://github.com/tpope/vim-commentary.git ~/.vim/bundle/commentary
     git clone https://github.com/easymotion/vim-easymotion ~/.vim/bundle/easymotion
     git clone https://github.com/SirVer/ultisnips ~/.vim/bundle/ultisnips
+    git clone https://github.com/honza/vim-snippets ~/.vim/bundle/vim-snippets
     git clone https://github.com/airblade/vim-rooter ~/.vim/bundle/vim-rooter
 
     # Syntax Checking 

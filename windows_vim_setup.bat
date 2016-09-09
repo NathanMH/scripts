@@ -12,4 +12,5 @@ call git clone git://github.com/tpope/vim-commentary.git "C:\Users\Nathan Mador-
 call git clone https://github.com/easymotion/vim-easymotion "C:\Users\Nathan Mador-House\Documents\gVimPortable\Data\settings\vimfiles\bundle\vim-easymotion"
 call git clone git://github.com/tpope/vim-surround "C:\Users\Nathan Mador-House\Documents\gVimPortable\Data\settings\vimfiles\bundle\vim-surround"
 call git clone https://github.com/SirVer/ultisnips "C:\Users\Nathan Mador-House\Documents\gVimPortable\Data\settings\vimfiles\bundle\ultisnips"
+call git clone https://github.com/honza/vim-snippets "C:\Users\Nathan Mador-House\Documents\gVimPortable\Data\settings\vimfiles\bundle\vim-snippets"
 call git clone https://github.com/airblade/vim-rooter "C:\Users\Nathan Mador-House\Documents\gVimPortable\Data\settings\vimfiles\bundle\vim-rooter"
