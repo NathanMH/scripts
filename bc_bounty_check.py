@@ -68,8 +68,7 @@ def current_bounties(soup):
     # Bounty links
     bounty_links = soup.find_all("a", href=re.compile("/bcgov/"))
     print(bounty_links[0])
-    # Tuple of [Key, Title, Link]
-    tuple 
+    # dict of [Key, Title, Link]
 
     
 def save_current_bounties(bounties, bounties_file):
