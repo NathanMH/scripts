@@ -1,49 +1,130 @@
-#!/bin/sh
+"""####################
+Author: Nathan Mador-House
+####################"""
+
+#######################
+"""####################
+Index:
+    1. Imports and Readme
+    2. Functions
+    3. Main
+    4. Testing
+####################"""
+#######################
+
+###################################################################
+# 1. IMPORTS AND README
+###################################################################
+
+from bs4 import BeautifulSoup
+<<<<<<< HEAD
+from urllib.request import urlopen
+=======
+import urllib.request
+import re
 
 # Searches for new open issues from BC open government pay for pull program.
 
-from bs4 import BeautifulSoup
-from urllib.request import urlopen
+###################################################################
+# 2. FUNCTIONS
+###################################################################
 
-url = "https://github.com/search?utf8=%E2%9C%93&q=org%3Abcgov+%241000&type=Issues&ref=searchresults"
+BOUNTIES_URL = "https://github.com/search?utf8=%E2%9C%93&q=org%3Abcgov+%241000&type=Issues&ref=searchresults"
+>>>>>>> 0da5d7fc801760c2685c64db03b4d2a6389c0a6b
 
+class Bounty():
+    """ Bounty object """
+
+
+    def __init__(self):
+        self.title = ""
+        self.status = None
+        self.url = ""
+
+
+    def __init__(self, title, status, url):
+        self.title = title
+        self.status = status
+        self.url = url
+
+    def set_title(self, title):
+        self.title = title
+    def set_status(self, status):
+        self.status = status
+    def set_url(self, url):
+        self.url = url
 
 def make_html(url):
+    """ Make soup object """
+
     html = urllib.request.Request(url)
     response = urllib.request.urlopen(html)
-    return response.read().decode('utf-8')
+    html_response = response.read().decode('utf-8')
+    the_soup = BeautifulSoup(html_response, 'html.parser')
+    return the_soup
 
 
-def make_soup(html):
-    soup = BeautifulSoup(html, 'html.parser')
-    return soup
+def previous_bounties(bounties_list):
+    """ Get list of previous bounties """
+
+    previous_bounties = []
+    with open(bounties_list, 'r') as text_file:
+        previous_bounties = text_file.readlines()
+
+    number_of_previous_bounties = len(previous_bounties)
+    print("Previous Bounties: " + str(number_of_previous_bounties))
+    for i in previous_bounties:
+        print(str(i).strip())
 
 
-def check_number_of_bounties(soup, filename):
-    with open(filename, 'r') as text_file:
-        bounties = text_file.readline()
+def current_bounties(soup):
+    """ Get list of current bounties """
 
-    number_active_bounties = len(soup.find_all("svg", class_="octicon octicon-issue-opened open"))
-    print("Previous Bounties: " + bounties.rstrip())
-    print("Current Bounties: " + str(number_active_bounties))
-    print("---------------")
+    # Active Bounties
+    active_bounties = soup.find_all("svg", class_="octicon octicon-issue-opened open")
+    total_active_bounties = len(active_bounties)
+    print("Active Bounties: " + str(total_active_bounties))
 
-    all_bounties = soup.find_all("p", class_="title")
-    for i in all_bounties:
-        print(i)
-        print()
+    # Bounties listed
+    bounties = soup.find_all(class_="issue-list-item public")
+    total_current_bounties = len(bounties)
+    print("Total bounties: " + str(total_current_bounties))
 
-    # active_bounties = []
-    # for i in range(1, number_active_bounties):
-    #     print(all_bounties[i])
-    #     active_bounties[i] = all_bounties[i]
-    # print(len(active_bounties)ne)
-    # for i in active_bounties:
-    #     print(i)
+    # Bounty links
+    bounty_links = soup.find_all("a", href=re.compile("/bcgov/"))
+    print(bounty_links[0])
+    # dict of [Title, Status, Link]
 
 
-# def __main__(url):
+def save_current_bounties(bounties, bounties_file):
+    for i in bounties:
+        with open(bounties_file, 'w') as text_file:
+            text_file.write(i)
 
-html = make_html(url)
-soup = make_soup(html)
-check_number_of_bounties(soup, 'previous_bounties.txt')
+
+def make_bounty_objects():
+    bounty_object_list = []
+
+    full_html_thingy = soup.find_all("svg")
+    for i in full_html_thingy:
+        bounty_object_list.append(Bounty())
+
+    bounty_links = soup.find_all("a", href=re.compile("/bcgov/"))
+    for i in bounty_links:
+        bounty_object_list.append()
+
+###################################################################
+# 3. MAIN
+###################################################################
+
+def main(url):
+
+    soup = make_html(url)
+    # previous_bounties('previous_bounties.txt')
+    current_bounties(soup)
+
+main(BOUNTIES_URL)
+
+###################################################################
+# 4. TESTING
+###################################################################
