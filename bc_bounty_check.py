@@ -3,7 +3,7 @@
 # Searches for new open issues from BC open government pay for pull program.
 
 from bs4 import BeautifulSoup
-import urllib.request
+from urllib.request import urlopen
 
 url = "https://github.com/search?utf8=%E2%9C%93&q=org%3Abcgov+%241000&type=Issues&ref=searchresults"
 
