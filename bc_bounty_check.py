@@ -28,6 +28,27 @@ import re
 
 BOUNTIES_URL = "https://github.com/search?utf8=%E2%9C%93&q=org%3Abcgov+%241000&type=Issues&ref=searchresults"
 
+class Bounty():
+    """ Bounty object """
+
+
+    def __init__(self):
+        self.title = ""
+        self.status = None
+        self.url = ""
+
+
+    def __init__(self, title, status, url):
+        self.title = title
+        self.status = status
+        self.url = url
+
+    def set_title(self, title):
+        self.title = title
+    def set_status(self, status):
+        self.status = status
+    def set_url(self, url):
+        self.url = url
 
 def make_html(url):
     """ Make soup object """
@@ -68,13 +89,25 @@ def current_bounties(soup):
     # Bounty links
     bounty_links = soup.find_all("a", href=re.compile("/bcgov/"))
     print(bounty_links[0])
-    # dict of [Key, Title, Link]
+    # dict of [Title, Status, Link]
 
-    
+
 def save_current_bounties(bounties, bounties_file):
     for i in bounties:
         with open(bounties_file, 'w') as text_file:
             text_file.write(i)
+
+
+def make_bounty_objects():
+    bounty_object_list = []
+
+    full_html_thingy = soup.find_all("svg")
+    for i in full_html_thingy:
+        bounty_object_list.append(Bounty())
+
+    bounty_links = soup.find_all("a", href=re.compile("/bcgov/"))
+    for i in bounty_links:
+        bounty_object_list.append()
 
 ###################################################################
 # 3. MAIN
