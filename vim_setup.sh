@@ -47,5 +47,5 @@ if [ ! -d ~/.vim/autoload/ ]; then
     fc-cache -f -v ~/.fonts/adobe-fonts/source-code-pro
 fi
 
-cp ~/Documents/dotfiles/vim/.vimrc ~/
+ln -s ~/Documents/dotfiles/vim/.vimrc ~/.vimrc
 cp -r ~/Documents/dotfiles/vim/colors/ ~/.vim/
