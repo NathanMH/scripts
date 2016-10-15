@@ -49,3 +49,5 @@ authentication.py
 *.swp
 test.txt
 previous_bounties.txt
+android-studio
+
