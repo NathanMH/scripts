@@ -1,15 +1,13 @@
-"""####################
-Author: Nathan Mador-House
-####################"""
+####################
+# Author: Nathan Mador-House
+####################
 
 #######################
-"""####################
-Index:
-    1. Imports and Readme
-    2. Functions
-    3. Main
-    4. Testing
-####################"""
+# Index:
+# 1. Imports and Readme
+# 2. Functions
+# 3. Main
+# 4. Testing
 #######################
 
 ###################################################################
@@ -17,9 +15,7 @@ Index:
 ###################################################################
 
 from bs4 import BeautifulSoup
-<<<<<<< HEAD
 from urllib.request import urlopen
-=======
 import urllib.request
 import re
 
@@ -30,7 +26,7 @@ import re
 ###################################################################
 
 BOUNTIES_URL = "https://github.com/search?utf8=%E2%9C%93&q=org%3Abcgov+%241000&type=Issues&ref=searchresults"
->>>>>>> 0da5d7fc801760c2685c64db03b4d2a6389c0a6b
+
 
 class Bounty():
     """ Bounty object """
