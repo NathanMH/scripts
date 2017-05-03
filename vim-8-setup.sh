@@ -1,5 +1,13 @@
 #!/bin/bash
 
+mkdir -p ~/.vim
+
+if [ ! -d ~/Documents/dotfiles/ ]; then
+    echo "dotfiles doesn't exist, cloning..."
+    git clone https://github.com/NathanMH/dotfiles ~/Documents/
+fi
+
+# Plugins
 git clone https://github.com/tpope/vim-surround ~/.vim/pack/musicnate/start/surround
 git clone https://github.com/tpope/vim-commentary ~/.vim/pack/musicnate/start/commentary
 git clone https://github.com/itchyny/lightline.vim ~/.vim/pack/musicnate/start/lightline
@@ -11,3 +19,7 @@ git clone https://github.com/kien/rainbow_parentheses.vim ~/.vim/pack/musicnate/
 git clone https://github.com/xuhdev/vim-latex-live-preview ~/.vim/pack/musicnate/start/latexlivepreview
 git clone https://github.com/mhinz/vim-startify ~/.vim/pack/musicnate/start/startify
 git clone https://github.com/vimwiki/vimwiki ~/.vim/pack/musicnate/start/vimwiki
+
+# Get fonts
+git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git ~/.fonts/adobe-fonts/source-code-pro
+fc-cache -f -v ~/.fonts/adobe-fonts/source-code-pro
