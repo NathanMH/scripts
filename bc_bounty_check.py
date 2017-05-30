@@ -31,7 +31,6 @@ BOUNTIES_URL = "https://github.com/search?utf8=%E2%9C%93&q=org%3Abcgov+%241000&t
 class Bounty():
     """ Bounty object """
 
-
     def __init__(self):
         self.title = ""
         self.status = None
