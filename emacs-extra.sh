@@ -11,3 +11,9 @@ wget -nc https://raw.githubusercontent.com/jsinglet/latex-preview-pane/master/me
 
 wget -nc https://raw.githubusercontent.com/jepugs/emacs-soft-tab/master/soft-tab.el -O /home/musicnate/.emacs.d/elpa/soft-tab.el
 
+wget -nc https://raw.githubusercontent.com/coldnew/linum-relative/master/linum-relative.el -O /home/musicnate/.emacs.d/elpa/linum-relative.el
+
+wget -nc https://raw.githubusercontent.com/caiorss/org-wiki/master/org-wiki.el -O /home/musicnate/.emacs.d/elpa/org-wiki.el
+
+wget -nc https://raw.githubusercontent.com/rakanalh/emacs-dashboard/master/dashboard.el -O /home/musicnate/.emacs.d/elpa/dashboard.el
+wget -nc https://raw.githubusercontent.com/rakanalh/emacs-dashboard/master/dashboard-widgets.el -O /home/musicnate/.emacs.d/elpa/dashboard-widgets.el
