@@ -17,3 +17,8 @@ wget -nc https://raw.githubusercontent.com/caiorss/org-wiki/master/org-wiki.el -
 
 wget -nc https://raw.githubusercontent.com/rakanalh/emacs-dashboard/master/dashboard.el -O /home/musicnate/.emacs.d/elpa/dashboard.el
 wget -nc https://raw.githubusercontent.com/rakanalh/emacs-dashboard/master/dashboard-widgets.el -O /home/musicnate/.emacs.d/elpa/dashboard-widgets.el
+
+wget -nc https://raw.githubusercontent.com/sabof/org-bullets/master/org-bullets.el -O /home/musicnate/.emacs.d/elpa/org-bullets.el
+
+wget -nc https://raw.githubusercontent.com/raugturi/powerline-evil/master/powerline-evil.el -O /home/musicnate/.emacs.d/elpa/powerline-evil.el
+wget -nc https://raw.githubusercontent.com/raugturi/powerline-evil/master/powerline-evil-themes.el -O /home/musicnate/.emacs.d/elpa/powerline-evil-themes.el
