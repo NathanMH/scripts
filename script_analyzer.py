@@ -27,6 +27,7 @@
 import csv
 import positivity_check
 import re
+import string
 
 ###################################################################
 # 2. FUNCTIONS
@@ -41,6 +42,10 @@ class Character:
     def print_stats(self):
         print(self.name)
         print(self.total_text)
+
+        translator = str.maketrans('','',string.punctuation)
+        str_without_pun = self.total_text.translate(translator)
+        print(str_without_pun)
 
 class Season:
     def __init__(self, season):
