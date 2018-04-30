@@ -15,14 +15,14 @@ RECEIVE_EMAIL_ADDRESS = authentication.RECEIVE_EMAIL_ADDRESS
 SUBJECT = "Noncerto just tweeted."
 
 # Email
-def send_email(msg):
+def send_email():
     server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
     server.login(SEND_EMAIL_ADDRESS, EMAIL_PASS)
 
     BODY = '\r\n'.join(['To: %s' % RECEIVE_EMAIL_ADDRESS,
                         'From: %s' % SEND_EMAIL_ADDRESS,
                         'Subject: %s' % SUBJECT,
-                        '', msg])
+                      ])
 
     # server.sendmail(SEND_EMAIL_ADDRESS, RECEIVE_EMAIL_ADDRESS, BODY)
     server.sendmail(SEND_EMAIL_ADDRESS, authentication.TEST_RECEIVE_EMAIL_ADDRESS, BODY)
@@ -37,8 +37,7 @@ def authen():
 
 class MyStreamListener(tweepy.StreamListener):
     def on_status(self, status):
-        print(status.text)
-        send_email(status.text)
+        send_email()
 
 
 if __name__ == "__main__":
