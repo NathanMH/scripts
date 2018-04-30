@@ -24,8 +24,8 @@ def send_email(msg):
                         'Subject: %s' % SUBJECT,
                         '', msg])
 
-    server.sendmail(SEND_EMAIL_ADDRESS, RECEIVE_EMAIL_ADDRESS, BODY)
-    # server.sendmail(SEND_EMAIL_ADDRESS, authentication.TEST_RECEIVE_EMAIL_ADDRESS, BODY)
+    # server.sendmail(SEND_EMAIL_ADDRESS, RECEIVE_EMAIL_ADDRESS, BODY)
+    server.sendmail(SEND_EMAIL_ADDRESS, authentication.TEST_RECEIVE_EMAIL_ADDRESS, BODY)
 
 # Twitter
 def authen():
@@ -40,12 +40,17 @@ class MyStreamListener(tweepy.StreamListener):
         print(status.text)
         send_email(status.text)
 
+
 if __name__ == "__main__":
     API = authen()
 
     # Username: "noncerto"
     USERID = "2657045784"
     TEST_USERID = "575930104"
+
     myStreamListener = MyStreamListener()
     myStream = tweepy.Stream(auth=API.auth, listener=myStreamListener)
-    myStream.filter(follow=[USERID])
+    # myStream.filter(follow=[USERID])
+
+    # Test
+    myStream.filter(follow=[TEST_USERID])
