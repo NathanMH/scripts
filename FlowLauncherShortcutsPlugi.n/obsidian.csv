@@ -1,0 +1,6 @@
+application,tag1,tag2,tag3,keybinding,function,note,,
+obsidian,command,,,Ctrl+P,Command Palette,,,
+obsidian,link,,,Alt+Enter,Follow link under cursor,,,
+obsidian,link,,,Ctrl+O,Quick open omnisearch,,,
+obsidian,search,,,Ctrl+Shift+f,Global note search,,,
+obsidian,fold,,,n,Fold current line,,,

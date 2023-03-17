@@ -1,0 +1,7 @@
+application,tag1,tag2,tag3,keybinding,function,note,,
+fman,,,,shift + l,Open in right pane,,,
+fman,,,,shift + h,Open in left pane,,,
+fman,,,,ctrl + d,Move to trash,,,
+fman,,,,ctrl + r,Rename,,,
+fman,,,,ctrl + n,Create and edit file,,,
+fman,,,,ctrl + o,Open favourites menu,,,

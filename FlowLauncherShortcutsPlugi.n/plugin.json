@@ -1,0 +1,12 @@
+{
+    "ID": "",
+    "ActionKeyword": "hp",
+    "Name": "Shortcuts",
+    "Description": "Shortcut cheatsheet plugin",
+    "Author": "Nathan Mador-House",
+    "Version": "1.0.0",
+    "Language": "python",
+    "Website": "https://github.com/",
+    "IcoPath": "Images\\app.png",
+    "ExecuteFileName": "main.py"
+}
